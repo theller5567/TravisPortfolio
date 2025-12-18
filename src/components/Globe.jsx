@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import createGlobe from "cobe"
-import { useMotionValue, useSpring } from "motion/react"
+import { useMotionValue, useSpring } from "framer-motion"
 import { twMerge } from "tailwind-merge"
 
 const MOVEMENT_DAMPING = 1400
@@ -99,13 +99,13 @@ const Globe = ({
   return (
     <div
       className={twMerge(
-        "mx-auto aspect-square w-full max-w-[600px]",
+        "mx-auto aspect-square w-full max-w-[500px]",
         className
       )}
     >
       <canvas
         className={twMerge(
-          "size-120 opacity-0 transition-opacity duration-500 contain-[layout_paint_size]"
+          "w-full h-full opacity-0 transition-opacity duration-500 contain-[layout_paint_size]"
         )}
         ref={canvasRef}
         onPointerDown={(e) => {

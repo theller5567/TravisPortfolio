@@ -1,5 +1,5 @@
 "use client";
-import { useScroll, useTransform, motion } from "motion/react";
+import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Timeline = ({
@@ -68,7 +68,7 @@ export const Timeline = ({
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-linear-to-t from-cyan-500 via-mint/50 to-transparent from-0% via-10% rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-cyan-500 via-mint/50 to-transparent from-0% via-10% rounded-full"
           />
         </div>
       </div>

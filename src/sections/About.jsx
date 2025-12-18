@@ -20,7 +20,7 @@ const About = () => {
                     <p className="headtext">Hi, I'm Travis Heller</p>
                     <p className="subtext">Over the last couple decades, I've developed my frontend and backend dev skills to deliver dynamic web applications.</p>
                 </div>
-                <div className="absolute inset-x-0 pointer-events-none bottom-0 h-1/2 sm:h-1/3 bg-linear-to-t from-indigo " />
+                <div className="absolute inset-x-0 pointer-events-none bottom-0 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo " />
             </div>
             {/* Grid 2 */}
             <div className="grid-2 grid-default-color">
@@ -45,7 +45,7 @@ const About = () => {
                     <p className="headtext">Time Zone</p>
                     <p className="subtext">I'm based in the United States - Georgia, and open to remote work worldwide.</p>
                 </div>
-                <figure className="absolute left-[30%] top-[10%]">
+                <figure className="absolute right-[-45%] top-[-20%]">
                     <Globe />
                 </figure>
             </div>

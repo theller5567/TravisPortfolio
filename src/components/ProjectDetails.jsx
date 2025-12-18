@@ -1,10 +1,10 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const ProjectDetails = ({title, description, subDescription, image, tags, href, closeModal}) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
         <motion.div 
-        className="relative max-w-2xl bg-linear-to-l from-midnight to-navy border-white/10"
+        className="relative max-w-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
         style={{
             maxHeight: '90vh',
             overflowY: 'auto',

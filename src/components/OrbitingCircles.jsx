@@ -8,7 +8,7 @@ export function OrbitingCircles({
   duration = 20,
   radius = 160,
   path = true,
-  iconSize = 30,
+  iconSize = 40,
   speed = 1,
   ...props
 }) {
@@ -38,10 +38,11 @@ export function OrbitingCircles({
               "--duration": calculatedDuration,
               "--radius": radius,
               "--angle": angle,
-              "--icon-size": `${iconSize}px`,
+              width: `${iconSize}px`,
+              height: `${iconSize}px`,
             }}
             className={twMerge(
-              `absolute flex size-(--icon-size) transform-gpu animate-orbit items-center justify-center rounded-full ${
+              `absolute flex transform-gpu animate-orbit items-center justify-center rounded-full ${
                 reverse ? "[animation-direction:reverse]" : ""
               }`,
               className

@@ -1,7 +1,7 @@
 import React from 'react'
 import { myProjects } from '../constants/index'
 import Project from '../components/Project'
-import { motion, useMotionValue, useSpring } from 'motion/react';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useState } from 'react';
 
 const Projects = () => {
@@ -20,7 +20,7 @@ const Projects = () => {
   return (
     <section id="projects" onMouseMove={handleMouseMove} className="relative c-space section-spacing">
         <h2 className="text-heading">My Selected Projects</h2>
-        <div className="bg-linear-to-r from-transparent via-neutral-700 to-transparent mt-12 h-px w-full">
+        <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-px w-full">
             {myProjects.map((project) => (
                 <Project key={project.id} {...project} setPreview={setPreview} />
             ))}

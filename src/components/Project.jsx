@@ -23,7 +23,7 @@ const Project = ({title, description, subDescription, href, image, tags, setPrev
                 <img src="assets/arrow-right.svg" alt="" className="w-5" />
             </button>
         </div>
-        <div className="bg-linear-to-r from-transparent via-neutral-700 to-transparent h-px w-full" />
+        <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-px w-full" />
         {isHidden && (
         <ProjectDetails
           title={title}

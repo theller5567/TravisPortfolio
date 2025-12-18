@@ -22,18 +22,18 @@ export function Frameworks() {
         "netlify",
         "aws",
         "cloudflare",
-      
+
     ];
   return (
     <div className="relative flex h-60 w-full flex-col items-center justify-center">
       <OrbitingCircles iconSize={35}>
         {skills.map((skill, index) => (
-          <Icon src={`assets/logos/${skill}.svg`} key={index} />
+          <Icon src={`/assets/logos/${skill}.svg`} key={index} />
         ))}
       </OrbitingCircles>
-      <OrbitingCircles iconSize={25} radius={100} reverse speed={2}>
+      <OrbitingCircles iconSize={20} radius={80} reverse speed={2}>
         {skills.reverse().map((skill, index) => (
-          <Icon src={`assets/logos/${skill}.svg`} key={index} />
+          <Icon src={`/assets/logos/${skill}.svg`} key={index} />
         ))}
       </OrbitingCircles>
     </div>

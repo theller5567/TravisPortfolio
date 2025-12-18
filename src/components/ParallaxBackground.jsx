@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll } from 'motion/react';
+import { motion, useTransform, useScroll } from 'framer-motion';
 
 
 const ParallaxBackground = () => {

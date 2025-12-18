@@ -5,7 +5,7 @@ import {
   motion,
   useMotionValue,
   useSpring,
-} from 'motion/react';
+} from 'framer-motion';
 
 import { twMerge } from 'tailwind-merge';
 
