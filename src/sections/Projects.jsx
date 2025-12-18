@@ -20,7 +20,8 @@ const Projects = () => {
   return (
     <section id="projects" onMouseMove={handleMouseMove} className="relative c-space section-spacing">
         <h2 className="text-heading">My Selected Projects</h2>
-        <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-px w-full">
+        <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-px w-full"></div>
+            <div className="projects-container"> 
             {myProjects.map((project) => (
                 <Project key={project.id} {...project} setPreview={setPreview} />
             ))}
@@ -32,7 +33,8 @@ const Projects = () => {
                 y: springY,
             }}
             />}
-        </div>
+            </div>
+        
     </section>
   )
 }

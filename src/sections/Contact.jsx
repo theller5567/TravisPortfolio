@@ -108,7 +108,7 @@ const Contact = () => {
                 className="field-input field-input-focus" 
                 placeholder="Share your thoughts..." 
                 rows={4} 
-                autocomplete="message" 
+                autoComplete="message" 
                 value={formData.message} 
                 onChange={handleChange} 
                 required disabled={isLoading} />

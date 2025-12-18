@@ -3,9 +3,10 @@ import { useRef } from 'react';
 import Globe from '../components/Globe';
 import CopyEmailButton from '../components/CopyEmailButton';
 import { Frameworks } from '../components/Frameworks';
-
+import { useMediaQuery } from 'react-responsive';
 const About = () => {
     const grid2Container = useRef();
+    const isMobile = useMediaQuery({maxWidth: 768});
   return (
     <section id="about" className="c-space section-spacing">
         <h2 className="text-heading">About Me</h2>
@@ -45,7 +46,7 @@ const About = () => {
                     <p className="headtext">Time Zone</p>
                     <p className="subtext">I'm based in the United States - Georgia, and open to remote work worldwide.</p>
                 </div>
-                <figure className="absolute right-[-45%] top-[-20%]">
+                <figure className={`absolute ${isMobile ? 'right-[-70%] top-[-20%]' : 'right-[-45%] top-[-20%]'}`}>
                     <Globe />
                 </figure>
             </div>
