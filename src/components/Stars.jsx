@@ -12,18 +12,30 @@ import { twMerge } from 'tailwind-merge';
 export default function Stars() {
   return (
     <StarsBackground>
-      <StarLayer count={1000} size={1} transition={{ repeat: Infinity, duration: 50, ease: 'linear' }} starColor='#fff' />
+      <StarLayer count={2000} size={1} transition={{ repeat: Infinity, duration: 50, ease: 'linear' }} starColor='#fff' />
     </StarsBackground>
   )
 }
 
 function generateStars(count, starColor) {
   const shadows = [];
+
+  // Get actual viewport dimensions
+  const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
+  const viewportHeight = typeof window !== 'undefined' ? window.innerHeight : 1080;
+
+  // Create stars that extend well beyond viewport for full coverage
+  // Add generous padding for parallax movement and edge cases
+  const totalWidth = viewportWidth + 4000;  // Extend 2000px beyond each edge
+  const totalHeight = viewportHeight + 4000;
+
   for (let i = 0; i < count; i++) {
-    const x = Math.floor(Math.random() * 4000) - 2000;
-    const y = Math.floor(Math.random() * 4000) - 2000;
+    // Center the distribution around the viewport
+    const x = Math.floor(Math.random() * totalWidth) - totalWidth / 2;
+    const y = Math.floor(Math.random() * totalHeight) - totalHeight / 2;
     shadows.push(`${x}px ${y}px ${starColor}`);
   }
+
   return shadows.join(', ');
 }
 
@@ -38,7 +50,16 @@ function StarLayer({
   const [boxShadow, setBoxShadow] = React.useState('');
 
   React.useEffect(() => {
-    setBoxShadow(generateStars(count, starColor));
+    const updateStars = () => {
+      setBoxShadow(generateStars(count, starColor));
+    };
+
+    // Generate stars initially
+    updateStars();
+
+    // Regenerate stars when window resizes
+    window.addEventListener('resize', updateStars);
+    return () => window.removeEventListener('resize', updateStars);
   }, [count, starColor]);
 
   return (
@@ -46,7 +67,7 @@ function StarLayer({
       data-slot="star-layer"
       animate={{ y: [0, -2000] }}
       transition={transition}
-      className={twMerge('absolute top-0 left-0 w-full h-[2000px]', className)}
+      className={twMerge('absolute top-0 left-1/2 transform -translate-x-1/2 w-[8000px] h-[2000px]', className)}
       {...props}
     >
       <div
@@ -103,7 +124,7 @@ function StarsBackground({
     <div
       data-slot="stars-background"
       className={twMerge(
-        'relative size-full overflow-hidden bg-[radial-gradient(ellipse_at_bottom,#262626_0%,#000_100%)]',
+        'relative size-full overflow-visible bg-[radial-gradient(ellipse_at_bottom,#262626_0%,#000_100%)]',
         className,
       )}
       onMouseMove={handleMouseMove}
