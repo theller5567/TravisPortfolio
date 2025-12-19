@@ -128,21 +128,16 @@ export const myProjects = [
       tags: [
         {
           id: 1,
-          name: "Magento 2",
-          path: "/assets/logos/magento.svg",
-        },
-        {
-          id: 2,
           name: "PHP",
           path: "/assets/logos/php.svg",
         },
         {
-          id: 3,
+          id: 2,
           name: "HTML5",
           path: "/assets/logos/html5.svg",
         },
         {
-          id: 4,
+          id: 3,
           name: "CSS3",
           path: "/assets/logos/css3.svg",
         },

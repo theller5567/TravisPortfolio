@@ -18,20 +18,21 @@ const Projects = () => {
     const [preview, setPreview] = useState(null);
     const isMobile = useMediaQuery({maxWidth: 768});
   return (
-    <section id="projects" onMouseMove={handleMouseMove} className="relative c-space section-spacing">
-        <h2 className="text-heading">My Selected Projects</h2>
-        <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-px w-full"></div>
-            <div className="projects-container"> 
+    <section id="projects" onMouseMove={handleMouseMove} className="relative c-space section-spacing" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" className="text-heading">My Selected Projects</h2>
+        <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-px w-full" aria-hidden="true"></div>
+            <div className="projects-container" role="list" aria-label="Portfolio projects">
             {myProjects.map((project) => (
                 <Project key={project.id} {...project} setPreview={setPreview} />
             ))}
             {(preview && !isMobile) && <motion.img className="bg-mint border-2 border-white/10 p-2 fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-90"
             src={preview}
-            alt="project"
+            alt="Project preview image"
             style={{
                 x: springX,
                 y: springY,
             }}
+            aria-hidden="true"
             />}
             </div>
         
