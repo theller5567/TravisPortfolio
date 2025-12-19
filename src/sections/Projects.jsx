@@ -3,7 +3,7 @@ import { myProjects } from '../constants/index'
 import Project from '../components/Project'
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useState } from 'react';
-
+import { useMediaQuery } from 'react-responsive';
 const Projects = () => {
 
     const x = useMotionValue(0);
@@ -16,7 +16,7 @@ const Projects = () => {
         y.set(e.clientY + 20);
     }
     const [preview, setPreview] = useState(null);
-    
+    const isMobile = useMediaQuery({maxWidth: 768});
   return (
     <section id="projects" onMouseMove={handleMouseMove} className="relative c-space section-spacing">
         <h2 className="text-heading">My Selected Projects</h2>
@@ -25,7 +25,7 @@ const Projects = () => {
             {myProjects.map((project) => (
                 <Project key={project.id} {...project} setPreview={setPreview} />
             ))}
-            {preview && <motion.img className="bg-mint border-2 border-white/10 p-2 fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-90"
+            {(preview && !isMobile) && <motion.img className="bg-mint border-2 border-white/10 p-2 fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-90"
             src={preview}
             alt="project"
             style={{
