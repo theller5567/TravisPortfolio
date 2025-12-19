@@ -232,7 +232,7 @@ export const myProjects = [
         "Timezone Accuracy: Logic to ensure hourly data aligns with the destination city's local timezone rather than the user's browser time.",
 
       ],
-      href: "https://weather-app-react-tmh.netlify.app/",
+      href: "https://weather-app-tmh.netlify.app/",
       logo: "",
       image: "/assets/projects/weatherApp.png",
       tags: [
