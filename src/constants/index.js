@@ -10,7 +10,7 @@ export const myProjects = [
       "Designed a responsive frontend with SCSS, enhancing user experience.",
       "Added a tag system, and a search functionality for functionality improvements.",
     ],
-    href: "https://nerdycoder.com/projects/omniapp/media-library",
+    href: "",
     logo: "",
     image: "/assets/projects/medialibrary.png",
     tags: [

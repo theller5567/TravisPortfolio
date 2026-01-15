@@ -50,7 +50,7 @@ const ProjectDetails = ({title, description, subDescription, image, tags, href, 
                             role="listitem" />
                         ))}
                     </div>
-                    <a
+                    {title !== "Media Library - React" ? <a
                         href={href}
                         className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
                         target="_blank"
@@ -59,7 +59,7 @@ const ProjectDetails = ({title, description, subDescription, image, tags, href, 
                         View Project
                         <img src="./assets/arrow-up.svg" className="size-4" alt="" aria-hidden="true" />
                         <span className="sr-only">Opens in new tab</span>
-                    </a>
+                    </a> : <span className="text-teal-400">Project is being revamped.</span>}
                 </div>
             </div>
         </motion.div>
