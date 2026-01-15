@@ -22,7 +22,7 @@ export const myProjects = [
       {
         id: 2,
         name: "MongoDB",
-        path: "/assets/logos/mongodb.png",
+        path: "/assets/logos/mongodb.svg",
       },
       {
         id: 3,
