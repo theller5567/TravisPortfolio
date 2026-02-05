@@ -2,6 +2,17 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Contact form (SendGrid)
+
+The contact form submits to a Netlify serverless function that sends email via [SendGrid](https://sendgrid.com/).
+
+**Netlify environment variables**
+
+- `SENDGRID_API_KEY` (required) – API key from [SendGrid API Keys](https://app.sendgrid.com/settings/api_keys).
+- `SENDGRID_FROM_EMAIL` (optional) – Sender address; must be a [verified single sender or domain](https://docs.sendgrid.com/ui/account-and-settings/sender-auth) in SendGrid. Defaults to `noreply@example.com` if unset.
+
+Set these in **Netlify → Site → Site configuration → Environment variables** (or in `netlify.toml` under `[build.environment]` for non-secrets). Use `netlify dev` locally so the function and env vars work.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh

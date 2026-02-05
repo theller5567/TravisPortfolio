@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import Alert from '../components/Alert';
 
 const Contact = () => {
@@ -26,34 +25,27 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log('Form Sending...');
     try {
-        await emailjs.send(
-            'service_qxmyfqn',
-            'template_2txp0bm',
-            {
-              from_name: formData.name,
-              to_name: 'Travis Heller',
-              from_email: formData.email,
-              to_email: 'travisheller@gmail.com',
-              message: formData.message,
-            },
-            '0HFM6vMh780yQW8_z'
-          );
-          setIsLoading(false);
-          showAlertMessage('success', 'Email sent successfully');
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setIsLoading(false);
-      showAlertMessage('danger', 'Failed to send email');
-    }
-    finally {
-      setIsLoading(false);
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
+      const res = await fetch('/api/send-contact-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        showAlertMessage('success', 'Email sent successfully');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        showAlertMessage('danger', data.error || 'Failed to send email');
+      }
+    } catch {
+      showAlertMessage('danger', 'Failed to send email');
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
@@ -67,7 +59,7 @@ const Contact = () => {
       /> */}
         {showAlert && <Alert type={alertType} text={alertMessage} />}
         <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
-          <div className="flex flex-col items0start w-full gap-5 mb-10">
+          <div className="flex flex-col items-start w-full gap-5 mb-10">
             <h2 className="text-heading">Let's Talk</h2>
             <p className="font-normal text-neutral-400">Wether you're looking to build a new website, improve your existing platform, or bring a unique project to life I'm here to help.</p>
           </div>
