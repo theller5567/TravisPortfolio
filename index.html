@@ -35,6 +35,12 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Hidden form for Netlify Forms detection (React form is JS-rendered) -->
+    <form name="contact" data-netlify="true" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

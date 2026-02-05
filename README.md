@@ -2,16 +2,15 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Contact form (SendGrid)
+## Contact form (Netlify Forms)
 
-The contact form submits to a Netlify serverless function that sends email via [SendGrid](https://sendgrid.com/).
+The contact form uses [Netlify Forms](https://docs.netlify.com/manage/forms/setup/). No serverless function or API keys are required.
 
-**Netlify environment variables**
+**Setup**
 
-- `SENDGRID_API_KEY` (required) – API key from [SendGrid API Keys](https://app.sendgrid.com/settings/api_keys).
-- `SENDGRID_FROM_EMAIL` (optional) – Sender address; must be a [verified single sender or domain](https://docs.sendgrid.com/ui/account-and-settings/sender-auth) in SendGrid. Defaults to `noreply@example.com` if unset.
-
-Set these in **Netlify → Site configuration → Environment variables**. For each variable, set **Scopes** to include **Functions** (or **All**) so the serverless function can read them at runtime. Use `netlify dev` locally so the function and env vars work.
+1. In **Netlify → Forms**, turn on **Enable form detection** (if it’s not already on).
+2. Redeploy the site so Netlify can detect the form in the built HTML.
+3. To get submissions by email: **Site configuration → Notifications → Form submission notifications → Add notification** and add your email (e.g. travis@nerdycoder.com).
 
 Currently, two official plugins are available:
 

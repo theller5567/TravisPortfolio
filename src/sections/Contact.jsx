@@ -26,24 +26,24 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await fetch('/api/send-contact-email', {
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
           name: formData.name,
           email: formData.email,
           message: formData.message,
-        }),
+        }).toString(),
       });
-      const data = await res.json().catch(() => ({}));
       if (res.ok) {
-        showAlertMessage('success', 'Email sent successfully');
+        showAlertMessage('success', 'Message sent successfully');
         setFormData({ name: '', email: '', message: '' });
       } else {
-        showAlertMessage('danger', data.error || 'Failed to send email');
+        showAlertMessage('danger', 'Failed to send message');
       }
     } catch {
-      showAlertMessage('danger', 'Failed to send email');
+      showAlertMessage('danger', 'Failed to send message');
     } finally {
       setIsLoading(false);
     }
@@ -63,7 +63,8 @@ const Contact = () => {
             <h2 className="text-heading">Let's Talk</h2>
             <p className="font-normal text-neutral-400">Wether you're looking to build a new website, improve your existing platform, or bring a unique project to life I'm here to help.</p>
           </div>
-          <form className="w-full" onSubmit={handleSubmit}>
+          <form className="w-full" name="contact" method="post" data-netlify="true" netlify onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
             <div className="mb-5">
               <label htmlFor="name" className="field-label">Full Name</label>
               <input 
