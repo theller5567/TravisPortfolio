@@ -11,8 +11,8 @@ export default async (req, context) => {
     );
   }
 
-  const apiKey = Netlify.env.get('SENDGRID_API_KEY');
-  const fromEmail = Netlify.env.get('SENDGRID_FROM_EMAIL') || 'noreply@example.com';
+  const apiKey = process.env.SENDGRID_API_KEY;
+  const fromEmail = process.env.SENDGRID_FROM_EMAIL || 'noreply@example.com';
 
   if (!apiKey) {
     return new Response(

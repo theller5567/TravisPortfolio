@@ -11,7 +11,7 @@ The contact form submits to a Netlify serverless function that sends email via [
 - `SENDGRID_API_KEY` (required) – API key from [SendGrid API Keys](https://app.sendgrid.com/settings/api_keys).
 - `SENDGRID_FROM_EMAIL` (optional) – Sender address; must be a [verified single sender or domain](https://docs.sendgrid.com/ui/account-and-settings/sender-auth) in SendGrid. Defaults to `noreply@example.com` if unset.
 
-Set these in **Netlify → Site → Site configuration → Environment variables** (or in `netlify.toml` under `[build.environment]` for non-secrets). Use `netlify dev` locally so the function and env vars work.
+Set these in **Netlify → Site configuration → Environment variables**. For each variable, set **Scopes** to include **Functions** (or **All**) so the serverless function can read them at runtime. Use `netlify dev` locally so the function and env vars work.
 
 Currently, two official plugins are available:
 
