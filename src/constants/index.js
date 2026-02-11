@@ -114,12 +114,12 @@ export const myProjects = [
       {
         id: 3,
         name: "MongoDB",
-        path: "/assets/logos/mongodb.png",
+        path: "/assets/logos/mongodb.svg",
       },
       {
         id: 4,
         name: "JavaScript",
-        path: "/assets/logos/js.svg",
+        path: "/assets/logos/javascript.svg",
       },
     ],
   },
@@ -224,7 +224,7 @@ export const myProjects = [
   },
   {
     id: 6,
-    title: "Blackjack Game - JavaScript",
+    title: "Blackjack Game - React",
     description:
       "A modern, interactive Blackjack game built with React 19 and Framer Motion. This project focuses on high-performance state management and seamless user interactions. Key challenges included implementing complex card game logic with useReducer, managing asset preloading for a zero-latency experience, and creating a responsive casino-style UI that works across all devices.",
     subDescription: [
@@ -241,18 +241,18 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: "JavaScript",
-        path: "/assets/logos/javascript.svg",
+        name: "React",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
+        name: "SCSS",
+        path: "/assets/logos/sass.svg",
       },
       {
         id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
+        name: "Framer Motion",
+        path: "/assets/logos/framer-motion.svg",
       },
     ],
   },
