@@ -203,7 +203,7 @@ export const myProjects = [
     ],
     href: "https://lh96-landingpage-roi.netlify.app/",
     logo: "",
-    image: "/assets/projects/roi-calculator.jpg",
+    image: "/assets/projects/lh96.png",
     tags: [
       {
         id: 1,
@@ -274,7 +274,7 @@ export const myProjects = [
     ],
     href: "https://weather-app-tmh.netlify.app/",
     logo: "",
-    image: "/assets/projects/weatherApp.png",
+    image: "/assets/projects/weatherapp.png",
     tags: [
       {
         id: 1,
