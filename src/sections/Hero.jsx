@@ -23,6 +23,12 @@ const Hero = () => {
     function downloadResume(){
         window.open('/assets/Travis_Heller_Resume26.pdf', '_blank');
     }
+    function scrollToContact(){
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
 
     const isMobile = useMediaQuery({maxWidth: 853});
     return (
@@ -37,7 +43,7 @@ const Hero = () => {
                         <p>Crafting tomorrow’s web, one flawless line at a time.</p>
                     
                     <div className="btn-container">
-                        <button className="btn">Contact Me</button>
+                        <button className="btn" onClick={scrollToContact}>Contact Me</button>
                         <button className="btn btn-secondary" onClick={downloadResume}><FaDownload /> Download Resume</button>
                     </div>
                     </motion.div>
