@@ -21,7 +21,7 @@ const Hero = () => {
     const [swordRotation, setSwordRotation] = useState(0);
 
     function downloadResume(){
-        window.open('/assets/Travis_Heller_Resume26.pdf', '_blank');
+        window.open('/assets/Travis+Heller+Resume+2026_1.pdf', '_blank');
     }
     function scrollToContact(){
         const contactSection = document.getElementById('contact');
