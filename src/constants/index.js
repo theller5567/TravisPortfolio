@@ -49,7 +49,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     title: "Synapse Site - React",
     description:
       "A marketing site built with Next.js, React, and Tailwind to showcase an AI-powered media management app. It uses clear CTAs, pricing, and demo prompts to guide visitors toward a free trial or purchase.",
@@ -86,7 +86,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Emoji Memory Game",
     description:
       "The Emoji Memory Game is a highly interactive, full-stack web application that gamifies the classic memory-matching puzzle. Players are challenged to find matching pairs of emojis within a limited number of attempts, with the game dynamically adjusting based on user-selected categories and difficulty levels. I wanted players to feel part of a community, so I built a persistent Global Leaderboard system. This required seamless coordination between the React frontend and a custom Node/Express backend.",
@@ -124,7 +124,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Chef Landon - AI Recipe Generator",
     description:
       "I built Chef Landon AI to showcase how AI can be integrated into a user-friendly product while maintaining high standards for security and design. This project highlights my ability to bridge the gap between complex backend AI integrations and a polished, responsive frontend user experience.",
@@ -160,7 +160,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Omni International - Ecommerce Website",
     description:
       "Designed and developed a fully customizable Magento 2 theme optimized for performance and SEO.",
@@ -191,7 +191,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "ROI Calculator - Landing Page",
     description:
       "This project is a sophisticated, interactive sales enablement platform developed for Omni International. It transforms a traditional product landing page into a powerful Business Intelligence (BI) tool designed to help laboratory stakeholders make data-driven decisions about laboratory automation.The centerpiece of the application is a custom-engineered ROI BI Engine that translates complex operational variables—such as lab technician salaries, manual error rates, and sample throughput—into clear, persuasive financial insights.",
@@ -223,7 +223,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Blackjack Game - React",
     description:
       "A modern, interactive Blackjack game built with React 19 and Framer Motion. This project focuses on high-performance state management and seamless user interactions. Key challenges included implementing complex card game logic with useReducer, managing asset preloading for a zero-latency experience, and creating a responsive casino-style UI that works across all devices.",
@@ -257,7 +257,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Weather App - React",
     description:
       "This is a high-performance, responsive Weather Dashboard built to provide real-time meteorological data with a focus on reliability, accessibility, and smooth user experience. Users can search for any city globally, view current weather conditions, and explore detailed hourly and daily forecasts.The application goes beyond simple data fetching by implementing industry-standard patterns for handling network instability, optimizing performance through intelligent caching, and ensuring a layout-stable UI during data loading.",
@@ -304,7 +304,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "QuizTrivia - React",
     description:
       "QuizTrivia is a fast, responsive React + Vite trivia app that pulls real questions from the Open Trivia DB API. It focuses on clean UX, smooth page transitions, and robust state management so players can customize their quiz, answer efficiently, and get instant feedback on their performance.",
@@ -351,6 +351,44 @@ export const myProjects = [
       },
     ],
   },
+  {
+    id: 10,
+    title: "Bookmark Manager - React",
+    description:
+      "Bookmark Manager is a responsive React + TypeScript application built to organize, search, and maintain a personal library of saved web resources. It turns a static bookmark list into a polished productivity tool with archive workflows, pinning, sorting, theme support, and reusable UI patterns that make saved links easier to manage over time.",
+    subDescription: [
+      "Full Bookmark CRUD: Add, edit, archive, pin, and manage saved links with tags, favicons, and visit metadata.",
+      "Search & Sorting: Filter by title, tags, archive status, pinned links, recently added, or most visited.",
+      "Theme Support: Built a persistent light/dark mode with React context.",
+      "Reusable Components: Created focused cards, forms, modals, buttons, sidebars, and toast UI patterns.",
+      "Responsive SPA: Built with React Router, TypeScript, Vite, local JSON seed data, and localStorage persistence.",
+    ],
+    href: "https://bookmark-manager-travisheller.netlify.app/home",
+    logo: "",
+    image: "/assets/projects/Bookmark-Manager-app.png",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 3,
+        name: "Vite",
+        path: "/assets/logos/vitejs.svg",
+      },
+      {
+        id: 4,
+        name: "CSS3",
+        path: "/assets/logos/css3.svg",
+      },
+    ],
+  },
 ];
 
 export const mySocials = [
@@ -373,7 +411,7 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "2015-Present",
+    title: "2016-Present",
     job: "Senior Developer & Marketing Specialist",
     date: "Omni International",
     contents: [
@@ -382,7 +420,18 @@ export const experiences = [
     ],
   },
   {
-    title: "2013-2014",
+    title: "2014-2015",
+    job: "Front-End Developer",
+    date: "Dynamix",
+    contents: [
+      "Delivered dynamic, highly interactive web experiences across multiple client projects by building custom front-end solutions through advanced HTML, CSS, JavaScript, PHP, and LESS development",
+      "Improved usability and on-page engagement by creating interactive UI elements through sliders, geolocation tools, and other custom visual features tailored to project needs",
+      "Expanded client control over website maintenance and content updates by integrating CMS functionality through flexible content structures that reduced developer dependence for routine changes",
+      "Raised quality and responsiveness across delivered sites by partnering with designers and backend developers through tighter execution, cleaner implementation, and stronger alignment between visual intent and technical delivery.",
+    ],
+  },
+  {
+    title: "2011-2013",
     job: "Front-End Developer & UX Designer",
     date: "Satori Interactive",
     contents: [
