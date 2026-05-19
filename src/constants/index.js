@@ -389,6 +389,54 @@ export const myProjects = [
       },
     ],
   },
+  {
+    id: 11,
+    title: "LiftLogic - React",
+    description:
+      "(This project is still in development.) LiftLogic is a full-stack strength training app that helps users create, review, and follow personalized workout programs. It combines Firebase Google authentication, onboarding-driven program generation, editable workout previews, protected app routing, and Mongo-backed workout data to guide users from setup into consistent training.",
+    subDescription: [
+      "Personalized Onboarding: Collects goals, experience level, available equipment, unit preferences, and anchor lifts to generate a starter strength program.",
+      "Editable Workout Preview: Lets users review and adjust their suggested program before accepting it, keeping the plan flexible while still guided.",
+      "Authenticated App Flow: Uses Firebase Google auth with protected and public-only routes so each user moves through onboarding, review, dashboard, and workout screens appropriately.",
+      "Workout Session Foundation: Includes API and data models for in-progress and completed workout logs, including exercise sets, notes, completion status, badges, and workout history.",
+      "Full-Stack Architecture: Built with React, TypeScript, Vite, SCSS, Express, MongoDB, Mongoose, Firebase Admin, and deployment-ready Netlify/Render configuration.",
+    ],
+    href: "https://liftlogi.netlify.app/",
+    logo: "",
+    image: "/assets/projects/liftlogic.png",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 3,
+        name: "Vite",
+        path: "/assets/logos/vitejs.svg",
+      },
+      {
+        id: 4,
+        name: "SCSS",
+        path: "/assets/logos/sass.svg",
+      },
+      {
+        id: 5,
+        name: "MongoDB",
+        path: "/assets/logos/mongodb.svg",
+      },
+      {
+        id: 6,
+        name: "Firebase",
+        path: "/assets/logos/firebase.svg",
+      },
+    ],
+  },
 ];
 
 export const mySocials = [
