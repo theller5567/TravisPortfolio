@@ -403,7 +403,7 @@ export const myProjects = [
     ],
     href: "https://liftlogi.netlify.app/",
     logo: "",
-    image: "/assets/projects/liftlogic.png",
+    image: "/assets/projects/liftlogic.webp",
     tags: [
       {
         id: 1,
